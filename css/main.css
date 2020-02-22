@@ -2,39 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 0; */
-    /* border: solid 2px black; */
 }
 
 .container {
-    /* display: flex;
-    flex-direction: column; */
     text-align: center;
     margin: auto;
     margin-top: 10%;
     max-width: 70%;
     height: auto;
     padding: .625em;
-    /* border: solid 2px black; */
     background-color: white;
     box-shadow: 1em .9em 2em gray;
     border-radius: 1em;
 }
-
-.category-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    padding: 1em;
-}
-
 
 #quote {
     font-size: 2em;
     display: inline-block;
     position: relative;
     padding: 1em;
-    /* color: yellow; */
 }
 
 span {
@@ -43,12 +29,21 @@ span {
     font-weight: bold;
 }
 
+/* 
+    Categories section styling
+*/
+.category-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 1em;
+}
+
 h2 {
     margin-top: 2em;
 }
 
 label {
-    /* margin-bottom: 1em; */
     font-weight: bold;
 }
 
@@ -62,10 +57,9 @@ button {
     background-color: white;
 }
 
+/* On Mouse Click */
 #btn-inspiration:active {
     transform: scale(1.05);
-    /* background-color: black; */
-
 }
 
 #btn-humor:active {
@@ -76,13 +70,10 @@ button {
     transform: scale(1.05);
 }
 
-
-
+/* On Mouse Hover */
 #btn-inspiration:hover {
     background-color: darkgoldenrod;
     color: white;
-    /* transform: scale(4); */
-
 }
 
 #btn-humor:hover {

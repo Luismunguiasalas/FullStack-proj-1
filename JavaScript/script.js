@@ -74,27 +74,19 @@ const quotes = [
             "image": "../images/rsz_person.jpeg"
         },
     ]
-
 ];
-
-// $("#name").text(quotes[0][0]["quote"]);
-//***** */ function creates a random number, 
-//***** */ accesses object in multi-dimensional array
-//***** */ adds object key values to DOM with jQuery
+/**  function creates a random number, accesses object in multi-dimensional array, adds object key values to DOM with jQuery **/
 const getRandomQuote = (catgrie) => {
     let ranNum = Math.floor(Math.random() * 3);
     let quoteObject = quotes[ranNum];
-    // console.log(quotes[0][ranNum]);
     setRandomColor();
-
     $("#quote").text(quotes[catgrie][ranNum]["quote"]);
     $("#name").text(quotes[catgrie][ranNum]["source"]);
     $("#citation").text(quotes[catgrie][ranNum]["citation"]);
     $("#year").text(quotes[catgrie][ranNum]["year"]);
     $("img").attr("src", quotes[catgrie][ranNum]["image"]);
-
 };
-// Generates a random number between 1 - 255  and assigns to each let //
+// Generates a random number between 1 - 255  and assigns to each let 
 function getRanColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
@@ -103,12 +95,11 @@ function getRanColor() {
     let rgbaStr = `rgba( ${r} , ${g} , ${b} , ${a} )`
     return rgbaStr;
 };
-// access body element, sets background color to getRanColor()  //
+// access body element, sets background color to getRanColor()
 function setRandomColor() {
     $("body").css("background-color", getRanColor());
 };
 
-
-$("#btn-business").click(() => { window.setTimeout(getRandomQuote(0), 10) });
-$("#btn-inspiration").click(() => { window.setTimeout(getRandomQuote(1), 1500) });
-$("#btn-humor").click(() => { window.setTimeout(getRandomQuote(2), 1500) });
+$("#btn-business").click(() => { getRandomQuote(0) });
+$("#btn-inspiration").click(() => { getRandomQuote(1) });
+$("#btn-humor").click(() => { getRandomQuote(2) });

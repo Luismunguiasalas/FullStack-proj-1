@@ -2,22 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
     <title>Quote Generator</title>
 </head>
 
 <body>
-    <p></p>
-    <h1>Name</h1>
-    <h2>quote</h2>
-    <h3>citation</h3>
-    <h4>year</h4>
-    <img src="" alt="random image">
-    <button id="0">button ONE</button>
-    <button id="1">button TWO</button>
-    <button id="2">button THREE</button>
+    <div class="container">
+
+        <p id="quote">
+            Click Buttons Below For Fun Quotes!
+        </p>
+        <span id="name"></span>
+        <span id="citation"></span>
+        <span id="year"></span>
+        <!-- <hr /> -->
+        <h2>Categories</h2>
+        <hr />
+        <div class="category-container">
+            <div>
+                <label for="btn-business">Business</label>
+                <!-- <p>Business</p> -->
+                <button id="btn-business">Click for quote</button>
+            </div>
+
+            <div>
+                <label for="btn-inspiration"> Inpiration</label>
+                <!-- <p>Inspiration</p> -->
+                <button id="btn-inspiration">Click for quote</button>
+            </div>
+
+            <div>
+                <label for="btn-humor"> Humor</label>
+                <!-- <p>Humor</p> -->
+                <button id="btn-humor">Click for quote</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../JavaScript/script.js"></script>
 </body>

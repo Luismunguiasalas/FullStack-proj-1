@@ -1,25 +1,25 @@
 const quotes = [
     [
         {
-            "source": "Elon",
-            "quote": "spacex is the best",
-            "citation": "The Book, Page 2",
+            "source": " - Elon, ",
+            "quote": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+            "citation": "The Book, Page 2 ",
             "year": 2020,
             "image": "../images/rsz_aerial.jpeg"
         },
 
         {
-            "source": "Gordon",
-            "quote": "Gordon is the best",
-            "citation": "The Book, Page 3",
+            "source": " - Gordon, ",
+            "quote": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+            "citation": "The Book, Page 3 ",
             "year": 20110,
             "image": "../images/rsz_low.jpeg"
         },
 
         {
-            "source": "Luis",
-            "quote": "luis is the best",
-            "citation": "The Book, Page luis",
+            "source": " - Luis, ",
+            "quote": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+            "citation": "The Book, Page 1 ",
             "year": 2010,
             "image": "../images/rsz_person.jpeg"
         },
@@ -35,7 +35,7 @@ const quotes = [
 
         {
             "source": "Jamess",
-            "quote": "Gordon is the best",
+            "quote": "quote Gordon is the best quote",
             "citation": "The Book, Page 3",
             "year": 20110,
             "image": "../images/rsz_low.jpeg"
@@ -43,7 +43,7 @@ const quotes = [
 
         {
             "source": "Jamesss",
-            "quote": "luis is the best",
+            "quote": "quoteluis is the best quote quote",
             "citation": "The Book, Page luis",
             "year": 2010,
             "image": "../images/rsz_person.jpeg"
@@ -77,6 +77,7 @@ const quotes = [
 
 ];
 
+// $("#name").text(quotes[0][0]["quote"]);
 //***** */ function creates a random number, 
 //***** */ accesses object in multi-dimensional array
 //***** */ adds object key values to DOM with jQuery
@@ -84,18 +85,13 @@ const getRandomQuote = (catgrie) => {
     let ranNum = Math.floor(Math.random() * 3);
     let quoteObject = quotes[ranNum];
     // console.log(quotes[0][ranNum]);
+    setRandomColor();
 
-    window.setTimeout(function () {
-
-        setRandomColor();
-
-        $("h1").text(quotes[catgrie][ranNum]["source"]);
-        $("h2").text(quotes[catgrie][ranNum]["quote"]);
-        $("h3").text(quotes[catgrie][ranNum]["citation"]);
-        $("h4").text(quotes[catgrie][ranNum]["year"]);
-        $("img").attr("src", quotes[catgrie][ranNum]["image"]);
-
-    }, 150);
+    $("#quote").text(quotes[catgrie][ranNum]["quote"]);
+    $("#name").text(quotes[catgrie][ranNum]["source"]);
+    $("#citation").text(quotes[catgrie][ranNum]["citation"]);
+    $("#year").text(quotes[catgrie][ranNum]["year"]);
+    $("img").attr("src", quotes[catgrie][ranNum]["image"]);
 
 };
 // Generates a random number between 1 - 255  and assigns to each let //
@@ -113,6 +109,6 @@ function setRandomColor() {
 };
 
 
-$("#0").click(() => { window.setTimeout(getRandomQuote(0), 10) });
-$("#1").click(() => { window.setTimeout(getRandomQuote(1), 1500) });
-$("#2").click(() => { window.setTimeout(getRandomQuote(2), 1500) });
+$("#btn-business").click(() => { window.setTimeout(getRandomQuote(0), 10) });
+$("#btn-inspiration").click(() => { window.setTimeout(getRandomQuote(1), 1500) });
+$("#btn-humor").click(() => { window.setTimeout(getRandomQuote(2), 1500) });

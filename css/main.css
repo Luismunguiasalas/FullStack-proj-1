@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 0; */
+    /* border: solid 2px black; */
+}
+
+.container {
+    /* display: flex;
+    flex-direction: column; */
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    max-width: 70%;
+    height: auto;
+    padding: .625em;
+    /* border: solid 2px black; */
+    background-color: white;
+    box-shadow: 1em .9em 2em gray;
+    border-radius: 1em;
+}
+
+.category-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 1em;
+}
+
+
+#quote {
+    font-size: 2em;
+    display: inline-block;
+    position: relative;
+    padding: 1em;
+    /* color: yellow; */
+}
+
+span {
+    display: inline-block;
+    text-align: end;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+label {
+    /* margin-bottom: 1em; */
+    font-weight: bold;
+}
+
+button {
+    margin-top: .8em;
+    display: block;
+    border-radius: 1em;
+    padding: .3em;
+    transition-duration: .2s;
+    font-size: .8em;
+    background-color: white;
+}
+
+#btn-inspiration:active {
+    transform: scale(1.05);
+    /* background-color: black; */
+
+}
+
+#btn-humor:active {
+    transform: scale(1.05);
+}
+
+#btn-business:active {
+    transform: scale(1.05);
+}
+
+
+
+#btn-inspiration:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    /* transform: scale(4); */
+
+}
+
+#btn-humor:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+#btn-business:hover {
+    background-color: darkslategray;
+    color: white;
+}

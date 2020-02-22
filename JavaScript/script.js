@@ -5,7 +5,7 @@ const quotes = [
             "quote": "spacex is the best",
             "citation": "The Book, Page 2",
             "year": 2020,
-            "image": "../images/rsz_aerial.jpg"
+            "image": "../images/rsz_aerial.jpeg"
         },
 
         {
@@ -13,7 +13,7 @@ const quotes = [
             "quote": "Gordon is the best",
             "citation": "The Book, Page 3",
             "year": 20110,
-            "image": "../images/rsz_low.jpg"
+            "image": "../images/rsz_low.jpeg"
         },
 
         {
@@ -21,7 +21,7 @@ const quotes = [
             "quote": "luis is the best",
             "citation": "The Book, Page luis",
             "year": 2010,
-            "image": "../images/rsz_person.jpg"
+            "image": "../images/rsz_person.jpeg"
         },
     ],
     [
@@ -30,7 +30,7 @@ const quotes = [
             "quote": "spacex is the best",
             "citation": "The Book, Page 2",
             "year": 2020,
-            "image": "../images/rsz_aerial.jpg"
+            "image": "../images/rsz_aerial.jpeg"
         },
 
         {
@@ -38,7 +38,7 @@ const quotes = [
             "quote": "Gordon is the best",
             "citation": "The Book, Page 3",
             "year": 20110,
-            "image": "../images/rsz_low.jpg"
+            "image": "../images/rsz_low.jpeg"
         },
 
         {
@@ -46,7 +46,7 @@ const quotes = [
             "quote": "luis is the best",
             "citation": "The Book, Page luis",
             "year": 2010,
-            "image": "../images/rsz_person.jpg"
+            "image": "../images/rsz_person.jpeg"
         },
     ],
     [
@@ -55,7 +55,7 @@ const quotes = [
             "quote": "spacex is the best",
             "citation": "The Book, Page 2",
             "year": 2020,
-            "image": "../images/rsz_aerial.jpg"
+            "image": "../images/rsz_aerial.jpeg"
         },
 
         {
@@ -63,7 +63,7 @@ const quotes = [
             "quote": "Gordon is the best",
             "citation": "The Book, Page 3",
             "year": 20110,
-            "image": "../images/rsz_low.jpg"
+            "image": "../images/rsz_low.jpeg"
         },
 
         {
@@ -71,7 +71,7 @@ const quotes = [
             "quote": "luis is the best",
             "citation": "The Book, Page luis",
             "year": 2010,
-            "image": "../images/rsz_person.jpg"
+            "image": "../images/rsz_person.jpeg"
         },
     ]
 
@@ -85,20 +85,17 @@ const getRandomQuote = (cat) => {
     let quoteObject = quotes[ranNum];
     // console.log(quotes[0][ranNum]);
 
-
     window.setTimeout(function () {
 
         setRandomColor();
 
         $("h1").text(quotes[cat][ranNum]["source"]);
-        $("p").text(quotes[cat][ranNum]["quote"]);
-        $("p").text(quotes[cat][ranNum]["citation"]);
-        $("p").text(quotes[cat][ranNum]["year"]);
+        $("h2").text(quotes[cat][ranNum]["quote"]);
+        $("h3").text(quotes[cat][ranNum]["citation"]);
+        $("h4").text(quotes[cat][ranNum]["year"]);
         $("img").attr("src", quotes[cat][ranNum]["image"]);
 
-
     }, 150);
-
 
 };
 // Generates a random number between 1 - 255  and assigns to each let //
@@ -116,26 +113,6 @@ function setRandomColor() {
 };
 // console.log(getRanColor());
 
-
-
-// function getRandomColor() {
-//     var letters = '0123456789ABCDEF';
-//     var color = '#';
-//     for (var i = 0; i < 3; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
-
-// function setRandomPColor() {
-//     $("p").css("color", getRandomColor());
-// }
-
-
-
-
-$("#0").click((() => { window.setTimeout(getRandomQuote(0), 2 * 1000) }));
-$("#1").click((() => { window.setTimeout(getRandomQuote(1), 2 * 1000) }));
-$("#2").click((() => { window.setTimeout(getRandomQuote(2), 2 * 1000) }));
-
-// $("button").click(function () { getRandomQuote() });
+$("#0").click((() => { window.setTimeout(getRandomQuote(0), 1500) }));
+$("#1").click((() => { window.setTimeout(getRandomQuote(1), 1500) }));
+$("#2").click((() => { window.setTimeout(getRandomQuote(2), 1500) }));

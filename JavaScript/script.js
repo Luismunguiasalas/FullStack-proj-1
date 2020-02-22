@@ -80,7 +80,7 @@ const quotes = [
 //***** */ function creates a random number, 
 //***** */ accesses object in multi-dimensional array
 //***** */ adds object key values to DOM with jQuery
-const getRandomQuote = (cat) => {
+const getRandomQuote = (catgrie) => {
     let ranNum = Math.floor(Math.random() * 3);
     let quoteObject = quotes[ranNum];
     // console.log(quotes[0][ranNum]);
@@ -89,11 +89,11 @@ const getRandomQuote = (cat) => {
 
         setRandomColor();
 
-        $("h1").text(quotes[cat][ranNum]["source"]);
-        $("h2").text(quotes[cat][ranNum]["quote"]);
-        $("h3").text(quotes[cat][ranNum]["citation"]);
-        $("h4").text(quotes[cat][ranNum]["year"]);
-        $("img").attr("src", quotes[cat][ranNum]["image"]);
+        $("h1").text(quotes[catgrie][ranNum]["source"]);
+        $("h2").text(quotes[catgrie][ranNum]["quote"]);
+        $("h3").text(quotes[catgrie][ranNum]["citation"]);
+        $("h4").text(quotes[catgrie][ranNum]["year"]);
+        $("img").attr("src", quotes[catgrie][ranNum]["image"]);
 
     }, 150);
 
@@ -111,8 +111,8 @@ function getRanColor() {
 function setRandomColor() {
     $("body").css("background-color", getRanColor());
 };
-// console.log(getRanColor());
 
-$("#0").click((() => { window.setTimeout(getRandomQuote(0), 1500) }));
-$("#1").click((() => { window.setTimeout(getRandomQuote(1), 1500) }));
-$("#2").click((() => { window.setTimeout(getRandomQuote(2), 1500) }));
+
+$("#0").click(() => { window.setTimeout(getRandomQuote(0), 10) });
+$("#1").click(() => { window.setTimeout(getRandomQuote(1), 1500) });
+$("#2").click(() => { window.setTimeout(getRandomQuote(2), 1500) });

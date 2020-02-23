@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: solid 2px black; */
 }
 
 .container {
@@ -28,14 +29,29 @@ span {
     font-size: 1.5em;
 }
 
-label {
-    font-weight: bold;
+.btn-container {
+    padding: 1em;
+    /* display: flex; */
+    width: 50%;
+    margin: auto;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    /* justify-self: center; */
+    justify-content: center;
+
+}
+
+h3 {
+    width: 49%;
+    display: inline-block;
 }
 
 button {
+    /* display: inline-block; */
+    width: 49%;
     margin: auto;
     margin-top: .8em;
-    display: block;
+    display: inline-block;
     border-radius: 1em;
     padding: .3em;
     transition-duration: .2s;
@@ -43,11 +59,11 @@ button {
     background-color: white;
 }
 
-#btn:active {
+#btn-start:active {
     transform: scale(1.05);
 }
 
-#btn:hover {
+#btn-start:hover {
     background-color: darkgoldenrod;
     color: white;
 }

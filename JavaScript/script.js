@@ -138,10 +138,54 @@ function setRandomColor() {
     $("body").css("background-color", getRanColor());
 };
 
+
+
+// const variable = setInterval(() => printQuote(getRandomQuote()), 2000);
+// let buttonStart = $("#btn-start")
+// let buttonStop = $("#btn-stop")
+
+// function thhhh() {
+//     const variable = setInterval(() => printQuote(getRandomQuote()), 2000);
+//     buttonStart.click(() => {
+//         buttonStart.css('display', "none");
+//         buttonStop.css('display', "inline-block");
+//         variable;
+//     });
+
+//     buttonStop.click(() => {
+//         buttonStart.css('display', "inline-block");
+//         buttonStop.css('display', "none");
+//         clearInterval(variable);
+
+//     });
+
+// }
+// buttonStart.click(() => {
+//     buttonStart.css('display', "none");
+//     buttonStop.css('display', "inline-block");
+//     setInterval(() => printQuote(getRandomQuote()), 2000);
+// });
+
+// buttonStop.click(() => {
+//     buttonStart.css('display', "inline-block");
+//     buttonStop.css('display', "none");
+//     // setInterval(() => printQuote(getRandomQuote()), 2000);
+//     clearInterval(setInterval(() => printQuote(getRandomQuote()), 2000));
+
+// });
+
+
+
+
+
 // $("#btn").click(() => { window.setInterval(printQuote(getRandomQuote()), 2000) });
 // window.setInterval(printQuote(getRandomQuote()), 2000)
 // window.onload(function () {
 //     window.setInterval(printQuote(getRandomQuote()))
 // })
 
-setInterval(printQuote(getRandomQuote()), 3000);
+// setInterval(printQuote(getRandomQuote()), 3000);
+
+
+
+// thhhh();

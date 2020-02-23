@@ -108,12 +108,22 @@ const quotes = [
 /**  function creates a random number, accesses object in multi-dimensional array, adds object key values to DOM with jQuery **/
 const getRandomQuote = () => {
     let ranNum = Math.floor(Math.random() * 15);
-    setRandomColor();
-    $("#quote").text(quotes[ranNum]["quote"]);
-    $("#name").text(quotes[ranNum]["source"]);
-    $("#citation").text(quotes[ranNum]["citation"]);
-    $("#year").text(quotes[ranNum]["year"]);
+    return ranNum
+    // setRandomColor();
+    // $("#quote").text(quotes[ranNum]["quote"]);
+    // $("#name").text(quotes[ranNum]["source"]);
+    // $("#citation").text(quotes[ranNum]["citation"]);
+    // $("#year").text(quotes[ranNum]["year"]);
 };
+//
+const printQuote = quoteObj => {
+    setRandomColor();
+    $("#quote").text(quotes[quoteObj]["quote"]);
+    $("#name").text(quotes[quoteObj]["source"]);
+    $("#citation").text(quotes[quoteObj]["citation"]);
+    $("#year").text(quotes[quoteObj]["year"]);
+};
+
 // Generates a random number between 1 - 255  and assigns to each let 
 function getRanColor() {
     let r = Math.floor(Math.random() * 256);
@@ -128,4 +138,10 @@ function setRandomColor() {
     $("body").css("background-color", getRanColor());
 };
 
-$("#btn").click(() => { getRandomQuote() });
+// $("#btn").click(() => { window.setInterval(printQuote(getRandomQuote()), 2000) });
+// window.setInterval(printQuote(getRandomQuote()), 2000)
+// window.onload(function () {
+//     window.setInterval(printQuote(getRandomQuote()))
+// })
+
+setInterval(printQuote(getRandomQuote()), 3000);

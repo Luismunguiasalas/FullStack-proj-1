@@ -105,23 +105,21 @@ const quotes = [
     },
 ];
 
-/**  function creates a random number, accesses object in multi-dimensional array, adds object key values to DOM with jQuery **/
+// function creates a random number for quote object index
 const getRandomQuote = () => {
     let ranNum = Math.floor(Math.random() * 15);
     return ranNum
-    // setRandomColor();
-    // $("#quote").text(quotes[ranNum]["quote"]);
-    // $("#name").text(quotes[ranNum]["source"]);
-    // $("#citation").text(quotes[ranNum]["citation"]);
-    // $("#year").text(quotes[ranNum]["year"]);
 };
-//
+
+//  accesses index returned by callback function, in multi-dimensional array, adds object key values to DOM with jQuery
 const printQuote = quoteObj => {
     setRandomColor();
     $("#quote").text(quotes[quoteObj]["quote"]);
-    $("#name").text(quotes[quoteObj]["source"]);
-    $("#citation").text(quotes[quoteObj]["citation"]);
-    $("#year").text(quotes[quoteObj]["year"]);
+    $("#name").html(`
+    <p class="name">${quotes[quoteObj]["source"]}
+    <span>${quotes[quoteObj]["citation"]}</span> 
+    <span>${quotes[quoteObj]["year"]}</span>
+    </p>`);  //formatted to match treehouse html example
 };
 
 // Generates a random number between 1 - 255  and assigns to each let 
@@ -138,10 +136,5 @@ function setRandomColor() {
     $("body").css("background-color", getRanColor());
 };
 
-// $("#btn").click(() => { window.setInterval(printQuote(getRandomQuote()), 2000) });
-// window.setInterval(printQuote(getRandomQuote()), 2000)
-// window.onload(function () {
-//     window.setInterval(printQuote(getRandomQuote()))
-// })
 
-setInterval(printQuote(getRandomQuote()), 3000);
+$("#btn").click(() => printQuote(getRandomQuote()));

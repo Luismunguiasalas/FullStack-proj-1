@@ -111,7 +111,7 @@ const getRandomQuote = () => {
     return ranNum
 };
 
-//  accesses index returned by callback function, in multi-dimensional array, adds object key values to DOM with jQuery
+//  accesses index returned by callback function in array, adds object key values to DOM with jQuery
 const printQuote = quoteObj => {
     setRandomColor();
     $("#quote").text(quotes[quoteObj]["quote"]);
